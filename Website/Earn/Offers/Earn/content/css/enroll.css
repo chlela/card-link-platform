@@ -1,3 +1,7 @@
+﻿/*
+Copyright (c) Microsoft Corporation. All rights reserved. 
+Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+*/
 /*
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -32,8 +36,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
 }
 @font-face {
   font-family: "bingoffers";
-  src: url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.eot');
-  src: url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.woff') format("woff"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.ttf') format("truetype"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.eot?#iefix') format("embedded-opentype"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.svg#bingoffers') format("svg");
+  src: url('/offers/earn/content/fonts/bingoffers-20140312.woff') format("woff"), url('/offers/earn/content/fonts/bingoffers-20140312.ttf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -245,7 +248,7 @@ hr {
   color: #505050;
   text-decoration: none;
   padding: 5px 5px 5px 50px;
-  background: #eeeeee;
+  background: #eee;
   /* fallback color */
   position: relative;
   display: block;
@@ -276,7 +279,7 @@ hr {
   border-top: 50px solid transparent;
   /* Go big on the size, and let overflow hide */
   border-bottom: 50px solid transparent;
-  border-left: 30px solid #eeeeee;
+  border-left: 30px solid #eee;
   position: absolute;
   top: 50%;
   margin-top: -50px;
@@ -367,7 +370,7 @@ hr {
 }
 .accounts-container .container .enroll-container .box a.button {
   text-decoration: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   color: white;
   background-color: #0078d7;
   display: block;
@@ -682,4 +685,3 @@ hr {
     width: 80%;
   }
 }
-/*# sourceMappingURL=enroll.css.map */

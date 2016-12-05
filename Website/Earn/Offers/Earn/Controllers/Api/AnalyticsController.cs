@@ -20,7 +20,7 @@ namespace Earn.Offers.Earn.Controllers.Api
     public class AnalyticsController : ApiController
     {
         [HttpPost]
-        public async Task<IHttpActionResult> Post([FromBody]AnalyticsModel analyticsModel)
+        public IHttpActionResult Post([FromBody]AnalyticsModel analyticsModel)
         {
             try
             {
@@ -45,10 +45,10 @@ namespace Earn.Offers.Earn.Controllers.Api
                         }
                     }
 
-                    bool status = await AnalyticsService.TrySaveAnalyticsData(analyticsModel);
+                    bool status = AnalyticsService.TrySaveAnalyticsData(analyticsModel);
                 }
             }
-            catch (Exception ex)
+            catch
             {
             }
 

@@ -63,7 +63,7 @@ namespace Earn.Offers.Earn.Controllers.Api
                 responseMessage.Content = new StringContent("Your request has been submitted successfully");
                 return await Task.FromResult<HttpResponseMessage>(responseMessage);
             }
-            catch (Exception e)
+            catch
             {
             }
 

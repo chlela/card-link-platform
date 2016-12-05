@@ -1,0 +1,38 @@
+﻿[
+  {
+    "outputFile": "Offers/Earn/content/css/accounts.css",
+    "inputFile": "Offers/Earn/content/css/accounts.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/enroll.css",
+    "inputFile": "Offers/Earn/content/css/enroll.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/faq.css",
+    "inputFile": "Offers/Earn/content/css/faq.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/footer.css",
+    "inputFile": "Offers/Earn/content/css/footer.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/learn.css",
+    "inputFile": "Offers/Earn/content/css/learn.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/merchant.css",
+    "inputFile": "Offers/Earn/content/css/merchant.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/reset.css",
+    "inputFile": "Offers/Earn/content/css/reset.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/settings.css",
+    "inputFile": "Offers/Earn/content/css/settings.less"
+  },
+  {
+    "outputFile": "Offers/Earn/content/css/socialbar.css",
+    "inputFile": "Offers/Earn/content/css/socialbar.less"
+  }
+]

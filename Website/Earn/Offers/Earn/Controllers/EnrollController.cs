@@ -54,7 +54,7 @@ namespace Earn.Offers.Earn.Controllers
         return View("~/offers/earn/views/enroll/enroll.cshtml");
 
       }
-      catch (Exception e)
+      catch
       {
         return HandleServerError();
       }

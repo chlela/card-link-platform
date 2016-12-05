@@ -63,7 +63,7 @@ namespace Earn.Offers.Earn.Controllers
           return View("~/offers/earn/views/account/places.cshtml", model);
         }
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -101,7 +101,7 @@ namespace Earn.Offers.Earn.Controllers
 
         return View("~/offers/earn/views/account/spending.cshtml", model);
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -194,7 +194,7 @@ namespace Earn.Offers.Earn.Controllers
           return View("~/offers/earn/views/account/history.cshtml", pageModel);
         }
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -238,7 +238,7 @@ namespace Earn.Offers.Earn.Controllers
 
         return View("~/offers/earn/views/account/settings.cshtml", pageModel);
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -284,7 +284,7 @@ namespace Earn.Offers.Earn.Controllers
         return View("~/offers/earn/views/account/referrals.cshtml", pageModel);
 
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -327,7 +327,7 @@ namespace Earn.Offers.Earn.Controllers
           return View("~/offers/earn/views/account/help.cshtml", pageModel);
         }
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -366,7 +366,7 @@ namespace Earn.Offers.Earn.Controllers
 
         return View("~/offers/earn/views/account/support.cshtml", pageModel);
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -427,7 +427,7 @@ namespace Earn.Offers.Earn.Controllers
 
         return View("~/offers/earn/views/account/restaurants.cshtml", pageModel);
       }
-      catch (Exception e)
+      catch
       {
       }
 
@@ -471,7 +471,7 @@ namespace Earn.Offers.Earn.Controllers
           return View("~/offers/earn/views/account/giftcards.cshtml", pageModel);
         }
       }
-      catch (Exception e)
+      catch
       {
       }
 

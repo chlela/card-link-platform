@@ -65,7 +65,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
              campaignReferrer: "cmp_ref"
          },
          reward: {
-             referralUrl: 'https://earn.microsoft.com',
+             referralUrl: 'https://earn.gshahine.com',
              referredcode: "borrfc"
          }
      },

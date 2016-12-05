@@ -1,3 +1,7 @@
+﻿/*
+Copyright (c) Microsoft Corporation. All rights reserved. 
+Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+*/
 /*
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -32,8 +36,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
 }
 @font-face {
   font-family: "bingoffers";
-  src: url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.eot');
-  src: url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.woff') format("woff"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.ttf') format("truetype"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.eot?#iefix') format("embedded-opentype"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.svg#bingoffers') format("svg");
+  src: url('/offers/earn/content/fonts/bingoffers-20140312.woff') format("woff"), url('/offers/earn/content/fonts/bingoffers-20140312.ttf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -134,7 +137,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
 /*end region*/
 #footer {
   padding: 40px 0;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 #footer div.logo {
   float: left;
@@ -184,7 +187,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     width: 100%;
     padding: 40px 0;
     bottom: 0;
-    background-color: #eeeeee;
+    background-color: #eee;
   }
   #footer div.logo {
     float: none;
@@ -220,4 +223,3 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     margin-top: 10px;
   }
 }
-/*# sourceMappingURL=footer.css.map */

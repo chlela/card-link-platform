@@ -8,13 +8,12 @@ using System.Web.Mvc;
 
 namespace Earn
 {
-    public class FilterConfig
+  public class FilterConfig
+  {
+    public static void RegisterGlobalFilters(GlobalFilterCollection filters)
     {
-        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
-        {
-            filters.Add(new HandleErrorAttribute(), 3);
-            filters.Add(new RootDomainRedirectFilterAttribute(), 1);
-           // filters.Add(new CorpnetFilterAttribute(), 2);
-        }
+      filters.Add(new HandleErrorAttribute(), 3);
+      //filters.Add(new RootDomainRedirectFilterAttribute(), 1);
     }
+  }
 }

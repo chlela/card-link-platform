@@ -4,7 +4,6 @@ Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -65,125 +64,21 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Hyak.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hyak.Common.1.0.2\lib\net45\Hyak.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights.TraceListener, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.TraceListener.2.1.0\lib\net45\Microsoft.ApplicationInsights.TraceListener.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Common.2.0.4\lib\net45\Microsoft.Azure.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Common.NetFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Common.2.0.4\lib\net45\Microsoft.Azure.Common.NetFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Azure.Documents.Client, Version=1.10.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Azure.DocumentDB.1.10.0\lib\net45\Microsoft.Azure.Documents.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Azure.KeyVault, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.KeyVault.1.0.0\lib\net45\Microsoft.Azure.KeyVault.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.Batch.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.Batch.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.Batch.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.Compute.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.Compute.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.Compute.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.Graph.RBAC.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.Graph.RBAC.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.Graph.RBAC.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.KeyVault.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.KeyVault.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.KeyVault.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.Network.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.Network.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.Network.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.ResourceManager.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.ResourceManager.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.ResourceManager.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Management.Storage.Fluent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Azure.Management.Storage.Fluent.1.0.0-beta3\lib\net45\Microsoft.Azure.Management.Storage.Fluent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.1\lib\net40\Microsoft.Data.Edm.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.1\lib\net40\Microsoft.Data.OData.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=2.28.1.741, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.2.28.1\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms, Version=2.28.1.741, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.2.28.1\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.2\lib\net45\Microsoft.Rest.ClientRuntime.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Rest.ClientRuntime.Azure, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.Azure.3.3.2\lib\net45\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Rest.ClientRuntime.Azure.Authentication, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.Azure.Authentication.2.2.8-preview\lib\net45\Microsoft.Rest.ClientRuntime.Azure.Authentication.dll</HintPath>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.1\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -211,10 +106,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WindowsAzure.Storage.7.2.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -247,8 +138,8 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.1\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
@@ -441,8 +332,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Content Include="Offers\Earn\content\css\SocialBar.min.css">
       <DependentUpon>SocialBar.css</DependentUpon>
     </Content>
-    <Content Include="Offers\Earn\content\fonts\bingoffers-20131115.svg" />
-    <Content Include="Offers\Earn\content\fonts\bingoffers-20140312.svg" />
     <Content Include="Offers\Earn\content\images\check.gif" />
     <Content Include="Offers\Earn\content\images\email_40x40.png" />
     <Content Include="Offers\Earn\content\images\fb_40x40.png" />
@@ -475,9 +364,9 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Content Include="Offers\Earn\content\js\registeredCardsViewModel.js" />
     <Content Include="Offers\Earn\content\js\transactionHistoryViewModel.js" />
     <Content Include="Offers\Earn\content\js\userServices.js" />
-    <Content Include="Offers\Earn\Views\Merchant\Agreements\ExhibitC.htm" />
-    <Content Include="Offers\Earn\Views\Merchant\Agreements\ExhibitD.htm" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -485,12 +374,12 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="db\" />
+    <Folder Include="Offers\Earn\Views\Legal\" />
+    <Folder Include="Offers\Earn\Views\Merchant\Agreements\" />
     <Folder Include="Offers\Earn\Views\Partial\" />
+    <Folder Include="Offers\Earn\Views\Test\" />
     <Folder Include="scripts\" />
     <Folder Include="Views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Offers\Earn\Views\Enroll\Enroll.cshtml" />
@@ -503,25 +392,12 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
   </ItemGroup>
   <ItemGroup>
     <Content Include="Offers\Earn\Views\Common\Footer.cshtml" />
-    <Content Include="Offers\Earn\Views\Common\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Offers\Earn\content\css\settings.less" />
-    <Content Include="Offers\Earn\content\css\settings.css.map">
-      <DependentUpon>settings.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\content\css\footer.less" />
-    <Content Include="Offers\Earn\content\css\footer.css.map">
-      <DependentUpon>footer.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\content\css\reset.less" />
-    <Content Include="Offers\Earn\content\css\reset.css.map">
-      <DependentUpon>reset.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\content\css\accounts.less" />
-    <Content Include="Offers\Earn\content\css\accounts.css.map">
-      <DependentUpon>accounts.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\Views\Account\AccountsLayout.cshtml" />
     <Content Include="Offers\Earn\Views\Account\Places.cshtml" />
     <Content Include="Offers\Earn\Views\Account\Settings.cshtml" />
@@ -533,48 +409,27 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Content Include="Offers\Earn\Views\Account\AccountError.cshtml" />
     <Content Include="Offers\Earn\Views\Enroll\EnrollUnauthenticated.cshtml" />
     <Content Include="Offers\Earn\content\css\enroll.less" />
-    <Content Include="Offers\Earn\content\css\enroll.css.map">
-      <DependentUpon>enroll.css</DependentUpon>
-    </Content>
-    <Content Include="Offers\Earn\content\fonts\bingoffers-20131115.eot" />
-    <Content Include="Offers\Earn\content\fonts\bingoffers-20131115.ttf" />
-    <Content Include="Offers\Earn\content\fonts\bingoffers-20131115.woff" />
-    <Content Include="Offers\Earn\content\fonts\bingoffers-20140312.eot" />
     <Content Include="Offers\Earn\content\fonts\bingoffers-20140312.ttf" />
     <Content Include="Offers\Earn\content\fonts\bingoffers-20140312.woff" />
     <Content Include="Offers\Earn\Views\Social\Facebook.cshtml" />
-    <Content Include="Offers\Earn\Views\Test\Test.cshtml" />
-    <Content Include="Offers\Earn\Views\Legal\TermsofUse.cshtml" />
     <Content Include="Offers\Earn\Views\Account\support.cshtml" />
     <Content Include="Offers\Earn\Views\Common\RedemptionHistory.cshtml" />
     <Content Include="manifest.json" />
     <Content Include="Offers\Earn\Views\Migrate\Index.cshtml" />
     <Content Include="Offers\Earn\content\css\learn.less" />
-    <Content Include="Offers\Earn\content\css\learn.css.map">
-      <DependentUpon>learn.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\Views\Common\FaqPartial.cshtml" />
-    <Content Include="Offers\Earn\Views\Legal\Faq.cshtml" />
     <Content Include="Offers\Earn\content\css\faq.less" />
-    <Content Include="Offers\Earn\content\css\faq.css.map">
-      <DependentUpon>faq.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\Views\Common\PopupNotifications.cshtml" />
-    <Content Include="Offers\Earn\Views\Merchant\Email.cshtml" />
-    <Content Include="Offers\Earn\Views\Merchant\InsertionOrder.cshtml" />
-    <Content Include="Offers\Earn\Views\Merchant\ThankYou.cshtml" />
-    <Content Include="Offers\Earn\Views\Merchant\_Layout.cshtml" />
     <Content Include="Offers\Earn\content\css\merchant.less" />
-    <Content Include="Offers\Earn\content\css\merchant.css.map">
-      <DependentUpon>merchant.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\Views\Common\SocialBar.cshtml" />
     <Content Include="Offers\Earn\content\css\socialbar.less" />
-    <Content Include="Offers\Earn\content\css\SocialBar.css.map">
-      <DependentUpon>SocialBar.css</DependentUpon>
-    </Content>
     <Content Include="Offers\Earn\Views\Account\GiftCards.cshtml" />
-    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="packages.config" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="Properties\PublishProfiles\earn-microsoft - Web Deploy.pubxml" />
     <None Include="Web.Release.EUS.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -615,9 +470,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -655,7 +507,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10551</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://earn.microsoft.com</IISUrl>
+          <IISUrl>http://earn.gshahine.com</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -665,16 +517,12 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
-  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
-    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
-    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
-  </Target>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Azure.DocumentDB.1.10.0\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Azure.DocumentDB.1.10.0\build\Microsoft.Azure.DocumentDB.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.Azure.DocumentDB.1.10.0\build\Microsoft.Azure.DocumentDB.targets" Condition="Exists('..\packages\Microsoft.Azure.DocumentDB.1.10.0\build\Microsoft.Azure.DocumentDB.targets')" />

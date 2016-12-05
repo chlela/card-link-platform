@@ -19,14 +19,14 @@ namespace Earn.Offers.Earn.Services
         /// </summary>
         /// <param name="analyticsData">Analytics data record.</param>
         /// <returns>Returns the status.</returns>
-        public static async Task<bool> TrySaveAnalyticsData(AnalyticsModel analyticsData)
+        public static bool TrySaveAnalyticsData(AnalyticsModel analyticsData)
         {
             if (analyticsData == null)
             {
                 return false;
             }
 
-            bool status = await AnalyticsDatabaseDal.TrySaveAnalyticsRecordToDatabase(analyticsData);
+            bool status = AnalyticsDatabaseDal.TrySaveAnalyticsRecordToDatabase(analyticsData);
             return status;
         }
     }

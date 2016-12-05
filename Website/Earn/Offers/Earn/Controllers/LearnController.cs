@@ -12,20 +12,20 @@ using System.Web.Mvc;
 
 namespace Earn.Offers.Earn.Controllers
 {
-    public class LearnController : Controller
+  public class LearnController : Controller
+  {
+    // TODO: Replace with a different auth model
+    public ActionResult Index()
     {
-    // TODO: FIX
-        public ActionResult Index()
-        {
-      //LiveIdAuthResult liveIdAuthResult = HttpContext.Items["liveauthstate"] as LiveIdAuthResult;
-      //LearnPageModel learnPageModel = new LearnPageModel();
-      //if (liveIdAuthResult != null)
-      //{
-      //    learnPageModel.LiveIdResult = liveIdAuthResult;
-      //}
+      LiveIdAuthResult liveIdAuthResult = new LiveIdAuthResult();
 
-      //return View("~/offers/earn/views/learn/learn.cshtml", learnPageModel);
-      return View();
-        }
+      LearnPageModel learnPageModel = new LearnPageModel();
+      if (liveIdAuthResult != null)
+      {
+        learnPageModel.LiveIdResult = liveIdAuthResult;
+      }
+
+      return View("~/offers/earn/views/learn/learn.cshtml", learnPageModel);
     }
+  }
 }

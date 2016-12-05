@@ -12,30 +12,30 @@ using System.Web;
 
 namespace Earn.Offers.Earn.Dal
 {
-    public class AnalyticsDatabaseDal
+  public class AnalyticsDatabaseDal
+  {
+    /// <summary>
+    /// Saves the analytics event record to the database.
+    /// </summary>
+    /// <param name="analyticsModel">The record to persist to database.</param>
+    /// <returns>The status of the request.</returns>
+    public static bool TrySaveAnalyticsRecordToDatabase(AnalyticsModel analyticsModel)
     {
-        /// <summary>
-        /// Saves the analytics event record to the database.
-        /// </summary>
-        /// <param name="analyticsModel">The record to persist to database.</param>
-        /// <returns>The status of the request.</returns>
-        public static async Task<bool> TrySaveAnalyticsRecordToDatabase(AnalyticsModel analyticsModel)
-        {
-            try
-            {
-              //using (var entities = new earnanalyticsEntities())
-              //{
-              //    entities.analytics.Add(DatabaseAdapter.GetDatabaseModel(analyticsModel));
-              //    await entities.SaveChangesAsync();
-              //    return true;
-              //}
+      try
+      {
+        //using (var entities = new earnanalyticsEntities())
+        //{
+        //    entities.analytics.Add(DatabaseAdapter.GetDatabaseModel(analyticsModel));
+        //    await entities.SaveChangesAsync();
+        //    return true;
+        //}
 
-              return false;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+        return false;
+      }
+      catch
+      {
+        return false;
+      }
     }
+  }
 }

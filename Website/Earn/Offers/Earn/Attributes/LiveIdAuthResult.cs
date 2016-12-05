@@ -9,48 +9,54 @@ using System.Web;
 
 namespace Earn.Offers.Earn.Attributes
 {
-    public class LiveIdAuthResult
+  public class LiveIdAuthResult
+  {
+    public LiveIdAuthResult()
     {
-        public bool IsUserAuthenticated
-        {
-            get;
-            set;
-        }
-
-        public string SignInHtmlLink
-        {
-            get;
-            set;
-        }
-
-        public string SignOutHtmlLink
-        {
-            get;
-            set;
-        }
-
-        public string RpsHeaders
-        {
-            get;
-            set;
-        }
-
-        public string Puid
-        {
-            get;
-            set;
-        }
-
-        public string Anid
-        {
-            get;
-            set;
-        }
-
-        public string ProfileName
-        {
-            get;
-            set;
-        }
+      SignInHtmlLink = string.Empty;
+      SignOutHtmlLink = string.Empty;
     }
+
+    public bool IsUserAuthenticated
+    {
+      get;
+      set;
+    }
+
+    public string SignInHtmlLink
+    {
+      get;
+      set;
+    }
+
+    public string SignOutHtmlLink
+    {
+      get;
+      set;
+    }
+
+    public string RpsHeaders
+    {
+      get;
+      set;
+    }
+
+    public string Puid
+    {
+      get;
+      set;
+    }
+
+    public string Anid
+    {
+      get;
+      set;
+    }
+
+    public string ProfileName
+    {
+      get;
+      set;
+    }
+  }
 }

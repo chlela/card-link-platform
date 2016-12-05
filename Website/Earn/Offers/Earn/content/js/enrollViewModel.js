@@ -11,7 +11,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
             share_url: configuration.queryStrings.reward.referralUrl,
             image_url: 'https://az414848.vo.msecnd.net/card-linked-assets/earn-fb-referandearn-v2.1.jpg',
             title: 'Enroll for free and get $5 in bonus Earn Credits!',
-            redirect_uri: "https://earn.microsoft.com/facebook",
+            redirect_uri: "https://earn.gshahine.com/facebook",
             name: 'EARN.MICROSOFT.COM',
             description: 'Earn at thousands of participating merchants and get the technology you love. Click or tap to enroll using my personal referral link.',
             twitterTitle: 'Enroll for free and get rewarded. Use my link to get $5 in bonus Earn Credits!',

@@ -1,3 +1,7 @@
+﻿/*
+Copyright (c) Microsoft Corporation. All rights reserved. 
+Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+*/
 /*
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -32,8 +36,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
 }
 @font-face {
   font-family: "bingoffers";
-  src: url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.eot');
-  src: url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.woff') format("woff"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.ttf') format("truetype"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.eot?#iefix') format("embedded-opentype"), url('https://earn.microsoft.com/offers/earn/content/fonts/bingoffers-20140312.svg#bingoffers') format("svg");
+  src: url('/offers/earn/content/fonts/bingoffers-20140312.woff') format("woff"), url('/offers/earn/content/fonts/bingoffers-20140312.ttf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -178,7 +181,7 @@ sup {
   margin-left: 30px;
 }
 #nav .container .right-nav ul li a {
-  color: #ffffff;
+  color: #fff;
   font-family: Segoe UI Web Regular;
   font-size: 20px;
   line-height: 40px;
@@ -193,7 +196,7 @@ sup {
   display: none;
 }
 #nav .container .right-nav ul li.border {
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   padding: 0 20px;
 }
 #nav .container .right-nav ul li.noborder {
@@ -207,7 +210,7 @@ sup {
   color: #737373;
 }
 #hero {
-  background-color: #eeeeee;
+  background-color: #eee;
   z-index: 5;
 }
 #hero #caraousel {
@@ -271,7 +274,7 @@ sup {
   margin: auto;
 }
 #hero #caraousel #slides .slide .text .text-container h1 {
-  color: #ffffff;
+  color: #fff;
   font-weight: normal;
   font-family: Segoe UI Web Light;
   font-size: 80px;
@@ -279,7 +282,7 @@ sup {
   text-align: center;
 }
 #hero #caraousel #slides .slide .text .text-container h3 {
-  color: #ffffff;
+  color: #fff;
   font-weight: normal;
   font-family: Segoe UI Web Regular;
   font-size: 20px;
@@ -288,7 +291,7 @@ sup {
 }
 #hero #caraousel #slides .slide .text .text-container a {
   text-decoration: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   color: white;
   background-color: #0078d7;
   display: block;
@@ -351,7 +354,7 @@ sup {
 #howitworks {
   padding: 40px 0;
   display: none;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 #howitworks h1 {
   color: #505050;
@@ -426,7 +429,7 @@ sup {
   padding-right: 70px;
 }
 .info-bar-gray {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 #fineprint {
   padding-bottom: 20px;
@@ -442,7 +445,7 @@ hr {
   border: 0;
   height: 1px;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 @media screen and (max-width: 1449px) {
   .container {
@@ -526,7 +529,7 @@ hr {
   #howitworks {
     padding: 40px 0;
     display: none;
-    background-color: #eeeeee;
+    background-color: #eee;
   }
   #howitworks h1 {
     font-size: 46px;
@@ -600,7 +603,7 @@ hr {
     margin-top: 10px;
   }
   #nav .container .right-nav ul li a {
-    color: #ffffff;
+    color: #fff;
     font-family: Segoe UI Web Regular;
     font-size: 16px;
     line-height: 34px;
@@ -609,7 +612,7 @@ hr {
     text-decoration: none;
   }
   #nav .container .right-nav ul li.border {
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
     padding: 0 20px;
   }
   #hero #caraousel #slides .slide .text {
@@ -619,7 +622,7 @@ hr {
     width: 650px;
   }
   #hero #caraousel #slides .slide .text .text-container h1 {
-    color: #ffffff;
+    color: #fff;
     font-size: 46px;
     line-height: 46px;
   }
@@ -759,7 +762,7 @@ hr {
     margin-left: 30px;
   }
   #nav .container .right-nav ul li a {
-    color: #ffffff;
+    color: #fff;
     font-family: Segoe UI Web Regular;
     font-size: 16px;
     line-height: 34px;
@@ -768,7 +771,7 @@ hr {
     text-decoration: none;
   }
   #nav .container .right-nav ul li.border {
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
     padding: 0 20px;
   }
   #nav .container .right-nav ul li.noborder {
@@ -789,7 +792,7 @@ hr {
     width: 90%;
   }
   #hero #caraousel #slides .slide .text .text-container h1 {
-    color: #ffffff;
+    color: #fff;
     font-size: 46px;
     line-height: 56px;
   }
@@ -841,7 +844,7 @@ hr {
   #howitworks {
     padding: 40px 0;
     display: none;
-    background-color: #eeeeee;
+    background-color: #eee;
   }
   #howitworks h1 {
     font-size: 20px;
@@ -925,7 +928,7 @@ hr {
     margin-left: 2px;
   }
   #nav .container .right-nav ul li a {
-    color: #ffffff;
+    color: #fff;
     font-family: Segoe UI Web Regular;
     font-size: 12px;
     line-height: 15px;
@@ -967,7 +970,7 @@ hr {
     width: 300px;
   }
   #hero #caraousel #slides .slide .text .text-container h1 {
-    color: #ffffff;
+    color: #fff;
     font-size: 34px;
     line-height: 40px;
   }
@@ -1018,7 +1021,7 @@ hr {
   #howitworks {
     padding: 40px 0;
     display: none;
-    background-color: #eeeeee;
+    background-color: #eee;
   }
   #howitworks h1 {
     font-size: 50px;
@@ -1083,4 +1086,3 @@ hr {
     margin: 20px auto;
   }
 }
-/*# sourceMappingURL=learn.css.map */
