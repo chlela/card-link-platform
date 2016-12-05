@@ -317,7 +317,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Offers\Earn\Attributes\AuthorizeUserAttribute.cs" />
-    <Compile Include="Offers\Earn\Attributes\CorpnetFilterAttribute.cs" />
     <Compile Include="Offers\Earn\Attributes\IpFilterAttribute.cs" />
     <Compile Include="Offers\Earn\Attributes\LiveIdAuthResult.cs" />
     <Compile Include="Offers\Earn\Attributes\LocationAttribute.cs" />
@@ -488,7 +487,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Folder Include="db\" />
     <Folder Include="Offers\Earn\Views\Partial\" />
     <Folder Include="scripts\" />
-    <Folder Include="Views\MyAnid\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -652,11 +651,11 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10551</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://earn.microsoft.com</IISUrl>
+          <IISUrl>http://earn.microsoft.com</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

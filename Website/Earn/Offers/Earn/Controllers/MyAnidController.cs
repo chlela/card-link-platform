@@ -12,25 +12,24 @@ using System.Web.Mvc;
 
 namespace Earn.Offers.Earn.Controllers
 {
-    public class MyAnidController : Controller
+  public class MyAnidController : Controller
+  {
+    // GET: MyAnid
+    public ActionResult Index()
     {
-        // GET: MyAnid
-        [Authorize]
-        public ActionResult Index()
+      LiveIdAuthResult liveIdAuthResult = HttpContext.Items["liveauthstate"] as LiveIdAuthResult;
+      if (!User.Identity.IsAuthenticated)
+      {
+        LearnPageModel learnPageModel = new LearnPageModel();
+        if (liveIdAuthResult != null)
         {
-            LiveIdAuthResult liveIdAuthResult = HttpContext.Items["liveauthstate"] as LiveIdAuthResult;
-            if (!User.Identity.IsAuthenticated)
-            {
-                LearnPageModel learnPageModel = new LearnPageModel();
-                if (liveIdAuthResult != null)
-                {
-                    learnPageModel.LiveIdResult = liveIdAuthResult;
-                }
-
-                return View("~/offers/earn/views/learn/learn.cshtml", learnPageModel);
-            }
-
-            return Content(liveIdAuthResult.Anid);
+          learnPageModel.LiveIdResult = liveIdAuthResult;
         }
+
+        return View("~/offers/earn/views/learn/learn.cshtml", learnPageModel);
+      }
+
+      return Content(liveIdAuthResult.Anid);
     }
+  }
 }

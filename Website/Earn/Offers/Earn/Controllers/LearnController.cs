@@ -12,8 +12,6 @@ using System.Web.Mvc;
 
 namespace Earn.Offers.Earn.Controllers
 {
-    [RequireHttps]
-    [Authorize]
     public class LearnController : Controller
     {
     // TODO: FIX

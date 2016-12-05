@@ -12,18 +12,16 @@ using System.Web.Mvc;
 
 namespace Earn.Offers.Earn.Controllers
 {
-    public class LegalController : Controller
+  public class LegalController : Controller
+  {
+    public ActionResult TermsOfUse()
     {
-        public ActionResult TermsOfUse()
-        {
-            return View("~/offers/earn/views/legal/termsofuse.cshtml");
-        }
-
-
-        [RequireHttps]
-        public ActionResult Faq()
-        {
-            return View("~/offers/earn/views/legal/faq.cshtml");
-        }
+      return View("~/offers/earn/views/legal/termsofuse.cshtml");
     }
+
+    public ActionResult Faq()
+    {
+      return View("~/offers/earn/views/legal/faq.cshtml");
+    }
+  }
 }
