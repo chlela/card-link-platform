@@ -4,15 +4,16 @@
 //
 namespace Lomo.Commerce.DataContracts
 {
-    using System.Runtime.Serialization;
+  using System.Runtime.Serialization;
 
-    using Newtonsoft.Json;
+  using Newtonsoft.Json;
+  using System.Collections.Generic;
 
-    /// <summary>
-    /// Entity that represents a request to 
-    /// enroll cards in rewards programs.
-    /// </summary>
-    [DataContract]
+  /// <summary>
+  /// Entity that represents a request to 
+  /// enroll cards in rewards programs.
+  /// </summary>
+  [DataContract]
     public class RewardsProgramCardEnrollment
     {
         /// <summary>
@@ -28,7 +29,7 @@ namespace Lomo.Commerce.DataContracts
         /// </summary>
         [JsonProperty(PropertyName = "card_brands")]
         [DataMember(Name = "card_brands")]
-        public string[] CardBrands { get; set; }
+        public IEnumerable<string> CardBrands { get; set; }
 
         /// <summary>
         /// The reward programs in which the cards 
@@ -36,6 +37,6 @@ namespace Lomo.Commerce.DataContracts
         /// </summary>
         [JsonProperty(PropertyName = "reward_programs")]
         [DataMember(Name = "reward_programs")]
-        public string[] RewardPrograms { get; set; }
+        public IEnumerable<string> RewardPrograms { get; set; }
     }
 }
