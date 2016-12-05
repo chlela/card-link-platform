@@ -13,19 +13,21 @@ using System.Web.Mvc;
 namespace Earn.Offers.Earn.Controllers
 {
     [RequireHttps]
-    [MicrosoftAccountAuthentication]
+    [Authorize]
     public class LearnController : Controller
     {
+    // TODO: FIX
         public ActionResult Index()
         {
-            LiveIdAuthResult liveIdAuthResult = HttpContext.Items["liveauthstate"] as LiveIdAuthResult;
-            LearnPageModel learnPageModel = new LearnPageModel();
-            if (liveIdAuthResult != null)
-            {
-                learnPageModel.LiveIdResult = liveIdAuthResult;
-            }
+      //LiveIdAuthResult liveIdAuthResult = HttpContext.Items["liveauthstate"] as LiveIdAuthResult;
+      //LearnPageModel learnPageModel = new LearnPageModel();
+      //if (liveIdAuthResult != null)
+      //{
+      //    learnPageModel.LiveIdResult = liveIdAuthResult;
+      //}
 
-            return View("~/offers/earn/views/learn/learn.cshtml", learnPageModel);
+      //return View("~/offers/earn/views/learn/learn.cshtml", learnPageModel);
+      return View();
         }
     }
 }

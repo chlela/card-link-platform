@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved. 
 // Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
 //
-using DataCollection.IdentityModel;
+//using DataCollection.IdentityModel;
 using Earn.Offers.Earn.Models;
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,9 @@ namespace Earn.Offers.Earn.Helper
     {
         public static string ConvertPuidToAnid(string puid)
         {
-            return AnidIdentityProvider.Instance.DeriveIdentity(string.Format("{0:X16}", puid));
+      // TODO: Fix
+      return string.Empty;
+            //return AnidIdentityProvider.Instance.DeriveIdentity(string.Format("{0:X16}", puid));
         }
 
         public static string GetHashString(string inputString)

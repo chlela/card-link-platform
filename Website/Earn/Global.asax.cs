@@ -9,7 +9,6 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Earn.App_Start;
-using Microsoft.Passport.RPS;
 
 namespace Earn
 {
@@ -25,7 +24,6 @@ namespace Earn
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            InitRps();
             HandleSslCertValidation();
             ServicePointManager.DefaultConnectionLimit = 48;
             ServicePointManager.Expect100Continue = false;
@@ -37,21 +35,8 @@ namespace Earn
             ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
         }
 
-        void InitRps()
-        {
-            RPS globalRPS = new RPS();
-            Application["globalRPS"] = globalRPS;
-            globalRPS.Initialize(null);
-        }
-
         void Application_End(object sender, EventArgs e)
         {
-            if (Application["globalRPS"] is RPS)
-            {
-                RPS globalRPS = (RPS)Application["globalRPS"];
-                globalRPS.Shutdown();
-                Application["globalRPS"] = null;
-            }
         }
     }
 }

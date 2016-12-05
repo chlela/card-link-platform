@@ -17,9 +17,9 @@ using System.Web.Mvc;
 namespace Earn.Offers.Earn.Controllers
 {
     [RequireHttps]
+    [Authorize]
     public class EnrollController : Controller
     {
-        [MicrosoftAccountAuthentication]
         public async Task<ActionResult> Index(bool debug = false, string step = "step1")
         {
             try
@@ -62,7 +62,6 @@ namespace Earn.Offers.Earn.Controllers
             }
         }
 
-        [MicrosoftAccountAuthentication]
         [HttpPost]
         public async Task<ActionResult> GetReferralCode()
         {

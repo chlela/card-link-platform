@@ -14,7 +14,7 @@ using ProfileService.Utility;
 
 namespace Earn.Offers.Earn.Controllers
 {
-    [MicrosoftAccountAuthentication]
+  [Authorize]
     public class MigrateController : Controller
     {
         /// <summary>

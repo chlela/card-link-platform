@@ -43,16 +43,16 @@ namespace Earn.Offers.Earn.Attributes
                 return;
             }
 
-            LomoUserAccountInfo accountInfo = BingSocialAccessorRepository.GetUserAccountInfo(blob);
-            if (accountInfo != null && accountInfo.IsAuthenticated && accountInfo.ProviderType == IdentityProviderType.MicrosoftAccount)
-            {
-                ClaimsPrincipal principal = TokenHelper.GetClaimsPrincipal(null, accountInfo.Name, accountInfo.ProviderType.ToString("g"), accountInfo.UserId);
-                Thread.CurrentPrincipal = principal;
-                if (HttpContext.Current != null)
-                {
-                    HttpContext.Current.User = principal;
-                }
-            }
+            //LomoUserAccountInfo accountInfo = BingSocialAccessorRepository.GetUserAccountInfo(blob);
+            //if (accountInfo != null && accountInfo.IsAuthenticated && accountInfo.ProviderType == IdentityProviderType.MicrosoftAccount)
+            //{
+            //    ClaimsPrincipal principal = TokenHelper.GetClaimsPrincipal(null, accountInfo.Name, accountInfo.ProviderType.ToString("g"), accountInfo.UserId);
+            //    Thread.CurrentPrincipal = principal;
+            //    if (HttpContext.Current != null)
+            //    {
+            //        HttpContext.Current.User = principal;
+            //    }
+            //}
         }
     }
 }

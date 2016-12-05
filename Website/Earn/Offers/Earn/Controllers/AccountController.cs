@@ -21,10 +21,10 @@ using Newtonsoft.Json;
 namespace Earn.Offers.Earn.Controllers
 {
     [RequireHttps(Order = 2)]
-    public class AccountController : Controller
+  [Authorize]
+  public class AccountController : Controller
     {
         [LocationAttribute]
-        [MicrosoftAccountAuthentication]
         public async Task<ActionResult> Index()
         {
             try
@@ -72,8 +72,7 @@ namespace Earn.Offers.Earn.Controllers
             return HandleServerError();
         }
 
-        [MicrosoftAccountAuthentication]
-        public async Task<ActionResult> Spending()
+    public async Task<ActionResult> Spending()
         {
             try
             {
@@ -111,8 +110,7 @@ namespace Earn.Offers.Earn.Controllers
             return HandleServerError();
         }
 
-        [MicrosoftAccountAuthentication]
-        public async Task<ActionResult> History()
+    public async Task<ActionResult> History()
         {
             try
             {
@@ -205,8 +203,7 @@ namespace Earn.Offers.Earn.Controllers
             return HandleServerError();
         }
 
-        [MicrosoftAccountAuthentication]
-        public async Task<ActionResult> Settings()
+    public async Task<ActionResult> Settings()
         {
             try
             {
@@ -250,8 +247,7 @@ namespace Earn.Offers.Earn.Controllers
             return HandleServerError();
         }
 
-        [MicrosoftAccountAuthentication]
-        public async Task<ActionResult> Referrals()
+    public async Task<ActionResult> Referrals()
         {
             try
             {
@@ -297,7 +293,6 @@ namespace Earn.Offers.Earn.Controllers
             return HandleServerError();
         }
 
-        [MicrosoftAccountAuthentication]
         public async Task<ActionResult> Help()
         {
             try
@@ -341,7 +336,6 @@ namespace Earn.Offers.Earn.Controllers
             return HandleServerError();
         }
 
-        [MicrosoftAccountAuthentication]
         public async Task<ActionResult> Support()
         {
             try
@@ -382,7 +376,6 @@ namespace Earn.Offers.Earn.Controllers
         }
 
         [LocationAttribute]
-        [MicrosoftAccountAuthentication]
         public async Task<ActionResult> Restaurants(DealSortOrder sortBy = DealSortOrder.City, string sortOrder = "asc")
         {
             try
@@ -443,7 +436,6 @@ namespace Earn.Offers.Earn.Controllers
             return HandleServerError();
         }
 
-        [MicrosoftAccountAuthentication]
         public async Task<ActionResult> GiftCards()
         {
             try

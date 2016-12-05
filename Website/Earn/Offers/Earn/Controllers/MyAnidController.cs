@@ -15,7 +15,7 @@ namespace Earn.Offers.Earn.Controllers
     public class MyAnidController : Controller
     {
         // GET: MyAnid
-        [MicrosoftAccountAuthentication]
+        [Authorize]
         public ActionResult Index()
         {
             LiveIdAuthResult liveIdAuthResult = HttpContext.Items["liveauthstate"] as LiveIdAuthResult;
