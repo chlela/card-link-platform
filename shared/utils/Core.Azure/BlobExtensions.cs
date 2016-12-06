@@ -62,7 +62,7 @@ namespace Lomo.Core.Azure
 		public static CloudBlockBlob MoveTo(this CloudBlockBlob source, string path)
 		{
 			var result = source.Container.GetBlockBlobReference(path);
-			result.StartCopyFromBlob(source);
+			result.StartCopy(source);
 			source.Delete();
 			return result;
 		}

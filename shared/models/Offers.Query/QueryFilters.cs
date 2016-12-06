@@ -11,7 +11,7 @@ namespace Lomo.DataModels.Offers.Query
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using DotM.DataContracts;
+    //using DotM.DataContracts;
 
     /// <summary>
     /// Encapsulates service query filters

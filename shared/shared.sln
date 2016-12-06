@@ -1,14 +1,10 @@
-#
-# Copyright (c) Microsoft Corporation. All rights reserved. 
-# Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
-#
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{81E56C80-F142-411E-91EC-E1C616041D5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azure.Utils", "utils\Azure.Utils\Azure.Utils.csproj", "{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azure.Utils", "utils\Azure.Utils\Azure.Utils.csproj", "{24B11302-A10F-476C-A7CF-818A621B5ABB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Utils", "utils\Common.Utils\Common.Utils.csproj", "{2DF48B39-6126-4C23-9610-4A6A1185CBB4}"
 EndProject
@@ -80,14 +76,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Release|x64.ActiveCfg = Release|Any CPU
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA}.Release|x86.ActiveCfg = Release|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Release|x64.ActiveCfg = Release|Any CPU
+		{24B11302-A10F-476C-A7CF-818A621B5ABB}.Release|x86.ActiveCfg = Release|Any CPU
 		{2DF48B39-6126-4C23-9610-4A6A1185CBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2DF48B39-6126-4C23-9610-4A6A1185CBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DF48B39-6126-4C23-9610-4A6A1185CBB4}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -325,7 +321,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FE11B2D1-0949-45FB-9609-0F1CD9A49DBA} = {81E56C80-F142-411E-91EC-E1C616041D5B}
+		{24B11302-A10F-476C-A7CF-818A621B5ABB} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{2DF48B39-6126-4C23-9610-4A6A1185CBB4} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{310E3F7F-5598-4361-9BCC-60CAE58D6BCB} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{47C8C8AC-1CDA-4C3B-9841-153D9896AEE4} = {81E56C80-F142-411E-91EC-E1C616041D5B}
@@ -353,5 +349,9 @@ Global
 		{7A141E88-8F0D-43B7-B71B-750AF2D80D02} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{36F71D1F-7362-4F82-BDE5-E0232D441A52} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{DDF5533D-8591-4A36-9E7C-A4220C3A1561} = {2FD30917-2A82-49D1-ADD6-6B851B607B7A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\DesignTime
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
