@@ -141,109 +141,109 @@ namespace OffersEmail.FrontEnd.Controllers
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestAutoprospectingBaxWithCoupon()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAP1"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestAutoprospectingBaxWithCoupon()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAP1"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestBAXAPRich2()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAPRich2"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestBAXAPRich2()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAPRich2"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestBAXAPRich2FU()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAPRich2FU"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestBAXAPRich2FU()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAPRich2FU"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the BP Claim Template</returns>
-        public async Task<ContentResult> TestBPClaimFB1()
-        {
-            return await GetTemplate(TestData.GetBusinessClaimVM(), "/GetEmail/AutoprospectingCreateNewBusinessClaim/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestBPClaimFB1()
+        //{
+        //    return await GetTemplate(TestData.GetBusinessClaimVM(), "/GetEmail/AutoprospectingCreateNewBusinessClaim/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestBAXFollowupEmail()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("AP1_Followup1"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestBAXFollowupEmail()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("AP1_Followup1"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestAutoprospectingBaxRich()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAP2"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestAutoprospectingBaxRich()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAP2"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test BAX Drop Off mail
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestBaxDropOffAdCreated()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXDropOff1"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestBaxDropOffAdCreated()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXDropOff1"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test BAX Drop Off mail
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestBaxDropOffAdNotCreated()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXDropOff2"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestBaxDropOffAdNotCreated()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXDropOff2"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test BAX Drop Off without coupon mail
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestBaxDropOffWithoutCoupon()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXDropOffWC"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestBaxDropOffWithoutCoupon()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXDropOffWC"), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the daily deals email html</returns>
-        public async Task<ContentResult> TestAutoprospectingBaxWithoutCoupon()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAP1", string.Empty), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestAutoprospectingBaxWithoutCoupon()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateAdVM("BAXAP1", string.Empty), "/GetEmail/AutoprospectingCreateNewAd/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the Ads autoprospecting email html</returns>
-        public async Task<ContentResult> TestAutoprospectingRuleBasedBaxDropOff()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingRuleBasedVM("AdExpressUI", "BAXDropOff1", string.Empty), "/GetEmail/AutoprospectingCreateRuleBased/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestAutoprospectingRuleBasedBaxDropOff()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingRuleBasedVM("AdExpressUI", "BAXDropOff1", string.Empty), "/GetEmail/AutoprospectingCreateRuleBased/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting invite user email
         /// </summary>
         /// <returns>invite user email html</returns>
-        public async Task<ContentResult> TestAutoprospectingInviteUserTemplate()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateOfferVM("UserInviteAP1"), "/GetEmail/AutoprospectingCreateNewOffer/invitenewuser/");
-        }
+        //public async Task<ContentResult> TestAutoprospectingInviteUserTemplate()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateOfferVM("UserInviteAP1"), "/GetEmail/AutoprospectingCreateNewOffer/invitenewuser/");
+        //}
 
         /// <summary>
         /// Tests the confirm email update template.

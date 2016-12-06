@@ -56,11 +56,11 @@ namespace OffersEmail.FrontEnd
                 File.WriteAllBytes(Path.Combine(localResourcePath, "screenshot.js"), bytes);
             }
 
-            if (RoleEnvironment.IsAvailable)
-            {
-                var traceListners = new List<TraceListener> { new DiagnosticMonitorTraceListener { Name = "AzureDiagnostics", Filter = new EventTypeFilter(SourceLevels.All) } };
-                Log.Instance = new TraceLog(traceListners);
-            }
+            //if (RoleEnvironment.IsAvailable)
+            //{
+            //    var traceListners = new List<TraceListener> { new DiagnosticMonitorTraceListener { Name = "AzureDiagnostics", Filter = new EventTypeFilter(SourceLevels.All) } };
+            //    Log.Instance = new TraceLog(traceListners);
+            //}
         }
     }
 }
