@@ -18,8 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "models", "models", "{FDD595
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.FileTransfer.Control.Contracts", "models\Cosmos.FileTransfer.Control.Contracts\Cosmos.FileTransfer.Control.Contracts.csproj", "{30C73461-AF98-4FBE-9AF0-689C12480256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotM.DataModels", "models\DotM.DataModels\DotM.DataModels.csproj", "{43993608-978A-4330-8A5F-D96A8FA3EADB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lomo.GeoSpatial", "models\Lomo.GeoSpatial\Lomo.GeoSpatial.csproj", "{123D006B-FFEC-4D14-9EB6-45E922848DB7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lomo.DataModels.Offers.Query", "models\Offers.Query\Lomo.DataModels.Offers.Query.csproj", "{DEAE794A-E94B-41CD-8482-B0497A65A341}"
@@ -65,6 +63,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureKeyVault", "utils\AzureKeyVault\AzureKeyVault.csproj", "{36F71D1F-7362-4F82-BDE5-E0232D441A52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lomo.Authentication", "middleware\Lomo.Authentication\Lomo.Authentication.csproj", "{DDF5533D-8591-4A36-9E7C-A4220C3A1561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotM.DataContracts", "models\DotM.DataContracts\DotM.DataContracts.csproj", "{90023D82-6810-4E6C-82CF-995C76266E22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -124,18 +124,6 @@ Global
 		{30C73461-AF98-4FBE-9AF0-689C12480256}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30C73461-AF98-4FBE-9AF0-689C12480256}.Release|x64.ActiveCfg = Release|Any CPU
 		{30C73461-AF98-4FBE-9AF0-689C12480256}.Release|x86.ActiveCfg = Release|Any CPU
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Debug|x64.ActiveCfg = Debug|x64
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Debug|x64.Build.0 = Debug|x64
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Debug|x86.ActiveCfg = Debug|x86
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Debug|x86.Build.0 = Debug|x86
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Release|x64.ActiveCfg = Release|x64
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Release|x64.Build.0 = Release|x64
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Release|x86.ActiveCfg = Release|x86
-		{43993608-978A-4330-8A5F-D96A8FA3EADB}.Release|x86.Build.0 = Release|x86
 		{123D006B-FFEC-4D14-9EB6-45E922848DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{123D006B-FFEC-4D14-9EB6-45E922848DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123D006B-FFEC-4D14-9EB6-45E922848DB7}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -316,6 +304,18 @@ Global
 		{DDF5533D-8591-4A36-9E7C-A4220C3A1561}.Release|x64.Build.0 = Release|x64
 		{DDF5533D-8591-4A36-9E7C-A4220C3A1561}.Release|x86.ActiveCfg = Release|x86
 		{DDF5533D-8591-4A36-9E7C-A4220C3A1561}.Release|x86.Build.0 = Release|x86
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Debug|x64.Build.0 = Debug|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Debug|x86.Build.0 = Debug|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Release|x64.ActiveCfg = Release|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Release|x64.Build.0 = Release|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Release|x86.ActiveCfg = Release|Any CPU
+		{90023D82-6810-4E6C-82CF-995C76266E22}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -327,7 +327,6 @@ Global
 		{47C8C8AC-1CDA-4C3B-9841-153D9896AEE4} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{49BF6A74-78C4-4C76-968E-1FD6FF7C988B} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{30C73461-AF98-4FBE-9AF0-689C12480256} = {FDD595FE-074C-4302-BD14-87739E1F7CB1}
-		{43993608-978A-4330-8A5F-D96A8FA3EADB} = {FDD595FE-074C-4302-BD14-87739E1F7CB1}
 		{123D006B-FFEC-4D14-9EB6-45E922848DB7} = {FDD595FE-074C-4302-BD14-87739E1F7CB1}
 		{DEAE794A-E94B-41CD-8482-B0497A65A341} = {FDD595FE-074C-4302-BD14-87739E1F7CB1}
 		{2F5DBEAD-851B-4836-90FA-175BE2CA7913} = {FDD595FE-074C-4302-BD14-87739E1F7CB1}
@@ -349,9 +348,10 @@ Global
 		{7A141E88-8F0D-43B7-B71B-750AF2D80D02} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{36F71D1F-7362-4F82-BDE5-E0232D441A52} = {81E56C80-F142-411E-91EC-E1C616041D5B}
 		{DDF5533D-8591-4A36-9E7C-A4220C3A1561} = {2FD30917-2A82-49D1-ADD6-6B851B607B7A}
+		{90023D82-6810-4E6C-82CF-995C76266E22} = {FDD595FE-074C-4302-BD14-87739E1F7CB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\DesignTime
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\lib\NET4;packages\EnterpriseLibrary.WindowsAzure.TransientFaultHandling.5.1.1212.0\DesignTime
 	EndGlobalSection
 EndGlobal

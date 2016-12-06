@@ -4,104 +4,110 @@
 //
 namespace Microsoft.HolMon.Security
 {
-    using System;
-    using System.Collections.Generic;
+  using System;
+  using System.Collections.Generic;
 
-    using global::Common.Utils;
+  using global::Common.Utils;
 
-    using Microsoft.HolMon.Common;
+  using Microsoft.HolMon.Common;
 
-    public class KeyPair : IEquatable<KeyPair>
+  public class KeyPair : IEquatable<KeyPair>
+  {
+    public KeyPair(string primaryKey, string secondaryKey)
     {
-        public KeyPair(string primaryKey, string secondaryKey)
-        {
-            this.PrimaryKey = primaryKey;
-            this.SecondaryKey = secondaryKey;
-        }
-
-        public string PrimaryKey { get; private set; }
-
-        public string SecondaryKey { get; private set; }
-
-        public IEnumerable<string> Keys
-        {
-            get
-            {
-                yield return this.PrimaryKey;
-                yield return this.SecondaryKey;
-            }
-        }
-
-        /// <summary>
-        /// Retrieves the primary key as a byte array.
-        /// </summary>
-        /// <returns></returns>
-        public byte[] PrimaryKeyToByteArray()
-        {
-            return Convert.FromBase64String(this.PrimaryKey);
-        }
-
-        /// <summary>
-        /// Retrieves the secondary key as byte array.
-        /// </summary>
-        /// <returns></returns>
-        public byte[] SecondaryKeyToByteArray()
-        {
-            return Convert.FromBase64String(this.SecondaryKey);
-        }
-
-        /// <summary>
-        /// Checks whether the specified key is equal to
-        /// one of the pairs.
-        /// </summary>
-        /// <param name="key">The key to compare against.</param>
-        /// <returns>
-        /// True if the specified key is same as the primary key or secondary key
-        /// of the current instance, false otherwise.
-        /// </returns>
-        public bool IsOneAmongThePair(string key)
-        {
-            return this.PrimaryKey.SecureCompare(key)
-                || this.SecondaryKey.SecureCompare(key);
-        }
-
-        /// <summary>
-        /// Compares the specified KeyPair with the current instance.
-        /// </summary>
-        /// <param name="other">The KeyPair instance to compare against.</param>
-        /// <returns>
-        /// True if the KeyPairs are equal, false otherwise.
-        /// </returns>
-        public bool Equals(KeyPair other)
-        {
-            return other != null &&
-                this.PrimaryKey.SecureCompare(other.PrimaryKey) &&
-                this.SecondaryKey.SecureCompare(other.SecondaryKey);
-        }
-
-        /// <summary>
-        /// Compares the specified object with the current instance.
-        /// </summary>
-        /// <param name="obj">The object instance to compare against.</param>
-        /// <returns>
-        /// True if the KeyPairs are equal, false otherwise.
-        /// </returns>
-        public override bool Equals(object obj)
-        {
-            return EquatableHelper<KeyPair>.AreEqual(this, obj);
-        }
-
-        /// <summary>
-        /// Gets the hash code for this instance.
-        /// </summary>
-        /// <returns>
-        /// The hash code for this instance.
-        /// </returns>
-        public override int GetHashCode()
-        {
-            return HashCodeCalculator.Calculate(
-                this.PrimaryKey.GetNullAwareHashCode(),
-                this.SecondaryKey.GetNullAwareHashCode());
-        }
+      this.PrimaryKey = primaryKey;
+      this.SecondaryKey = secondaryKey;
     }
+
+    public string PrimaryKey { get; private set; }
+
+    public string SecondaryKey { get; private set; }
+
+    public IEnumerable<string> Keys
+    {
+      get
+      {
+        yield return this.PrimaryKey;
+        yield return this.SecondaryKey;
+      }
+    }
+
+    /// <summary>
+    /// Retrieves the primary key as a byte array.
+    /// </summary>
+    /// <returns></returns>
+    public byte[] PrimaryKeyToByteArray()
+    {
+      return Convert.FromBase64String(this.PrimaryKey);
+    }
+
+    /// <summary>
+    /// Retrieves the secondary key as byte array.
+    /// </summary>
+    /// <returns></returns>
+    public byte[] SecondaryKeyToByteArray()
+    {
+      return Convert.FromBase64String(this.SecondaryKey);
+    }
+
+    /// <summary>
+    /// Checks whether the specified key is equal to
+    /// one of the pairs.
+    /// </summary>
+    /// <param name="key">The key to compare against.</param>
+    /// <returns>
+    /// True if the specified key is same as the primary key or secondary key
+    /// of the current instance, false otherwise.
+    /// </returns>
+    public bool IsOneAmongThePair(string key)
+    {
+      return this.PrimaryKey.SecureCompare(key)
+          || this.SecondaryKey.SecureCompare(key);
+    }
+
+    /// <summary>
+    /// Compares the specified KeyPair with the current instance.
+    /// </summary>
+    /// <param name="other">The KeyPair instance to compare against.</param>
+    /// <returns>
+    /// True if the KeyPairs are equal, false otherwise.
+    /// </returns>
+    public bool Equals(KeyPair other)
+    {
+      return other != null &&
+          this.PrimaryKey.SecureCompare(other.PrimaryKey) &&
+          this.SecondaryKey.SecureCompare(other.SecondaryKey);
+    }
+
+    /// <summary>
+    /// Compares the specified object with the current instance.
+    /// </summary>
+    /// <param name="obj">The object instance to compare against.</param>
+    /// <returns>
+    /// True if the KeyPairs are equal, false otherwise.
+    /// </returns>
+    public override bool Equals(object obj)
+    {
+      return EquatableHelper<KeyPair>.AreEqual(this, obj);
+    }
+
+    /// <summary>
+    /// Gets the hash code for this instance.
+    /// </summary>
+    /// <returns>
+    /// The hash code for this instance.
+    /// </returns>
+    public override int GetHashCode()
+    {
+      // TODO: test if this works
+      //return HashCodeCalculator.Calculate(
+      //    this.PrimaryKey.GetNullAwareHashCode(),
+      //    this.SecondaryKey.GetNullAwareHashCode());
+      int hash = 17;
+      hash = hash * 31 + this.PrimaryKey.GetNullAwareHashCode();
+      hash = hash * 31 + this.SecondaryKey.GetNullAwareHashCode();
+      return hash;
+
+    }
+  }
 }

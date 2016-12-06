@@ -13,7 +13,7 @@ namespace Lomo.DataModels.Offers.Query
     using System.Collections.Generic;
     using System.Linq;
     using System.Xml.Linq;
-    using DotM.DataContracts.Constants;
+    //using DotM.DataContracts.Constants;
 
     /// <summary>
     /// The RankingGroup
