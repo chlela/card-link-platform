@@ -427,47 +427,47 @@ namespace OffersEmail.FrontEnd.Controllers
         /// <param name="campaign">The Specific Campaign of this email</param>
         /// <param name="referrer">The referrer for analytics</param>
         /// <returns>The Confirm email template for unauthenticated CLO sign up</returns>
-        [HttpPost]
-        public ActionResult ConfirmUnAuthenticatedSignupEmail(string campaign = "na", string referrer = "BO_EMAIL")
-        {
-            ViewBag.campaign = campaign;
-            ViewBag.referrer = referrer;
-            if (Request.ContentLength == 0)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Nothing was submitted");
-            }
+        //[HttpPost]
+        //public ActionResult ConfirmUnAuthenticatedSignupEmail(string campaign = "na", string referrer = "BO_EMAIL")
+        //{
+        //    ViewBag.campaign = campaign;
+        //    ViewBag.referrer = referrer;
+        //    if (Request.ContentLength == 0)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Nothing was submitted");
+        //    }
 
-            // Need to do this for an unknown reason within MVC. When passing url parameters to the method, position is set to the end of the stream.
-            Request.InputStream.Position = 0;
+        //    // Need to do this for an unknown reason within MVC. When passing url parameters to the method, position is set to the end of the stream.
+        //    Request.InputStream.Position = 0;
 
-            using (var reader = new StreamReader(Request.InputStream))
-            {
-                var content = reader.ReadToEnd();
-                var confirmationUrl = string.Empty;
-                var json = JsonConvert.DeserializeObject(content) as JObject;
+        //    using (var reader = new StreamReader(Request.InputStream))
+        //    {
+        //        var content = reader.ReadToEnd();
+        //        var confirmationUrl = string.Empty;
+        //        var json = JsonConvert.DeserializeObject(content) as JObject;
 
-                if (json != null)
-                {
-                    confirmationUrl = json["confirmation_url"].Value<string>();
-                }
+        //        if (json != null)
+        //        {
+        //            confirmationUrl = json["confirmation_url"].Value<string>();
+        //        }
 
-                if (string.IsNullOrWhiteSpace(confirmationUrl))
-                {
-                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "confirmation_url is missing");
-                }
+        //        if (string.IsNullOrWhiteSpace(confirmationUrl))
+        //        {
+        //            return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "confirmation_url is missing");
+        //        }
 
-                var acceptTypes = this.Request.AcceptTypes;
-                if (acceptTypes != null && (acceptTypes.Length > 0
-                                                    && acceptTypes[0].Equals("text/plain", StringComparison.InvariantCultureIgnoreCase)))
-                {
-                    return Content(string.Format(UnAuthCLOEmailConfirm.ConfirmEmailTextContent, confirmationUrl));
-                }
+        //        var acceptTypes = this.Request.AcceptTypes;
+        //        if (acceptTypes != null && (acceptTypes.Length > 0
+        //                                            && acceptTypes[0].Equals("text/plain", StringComparison.InvariantCultureIgnoreCase)))
+        //        {
+        //            return Content(string.Format(UnAuthCLOEmailConfirm.ConfirmEmailTextContent, confirmationUrl));
+        //        }
 
-                ViewBag.showWarning = true;
-                ViewBag.doNotShowMore = true;
-                return this.View("ConfirmUnAuthenticatedSignupEmail", new UnauthenticatedSignupEmailConfirmationVM(confirmationUrl));
-            }
-        }
+        //        ViewBag.showWarning = true;
+        //        ViewBag.doNotShowMore = true;
+        //        return this.View("ConfirmUnAuthenticatedSignupEmail", new UnauthenticatedSignupEmailConfirmationVM(confirmationUrl));
+        //    }
+        //}
 
         /// <summary>
         /// Link your account to MSID/FBID.

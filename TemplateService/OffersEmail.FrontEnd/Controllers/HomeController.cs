@@ -103,28 +103,28 @@ namespace OffersEmail.FrontEnd.Controllers
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the daily deals email html</returns>
-        public async Task<ContentResult> TestMerchantReportTemplate()
-        {
-            return await GetTemplate(TestData.GetMerchantReportVM(), "/GetEmail/MerchantReport");
-        }
+        //public async Task<ContentResult> TestMerchantReportTemplate()
+        //{
+        //    return await GetTemplate(TestData.GetMerchantReportVM(), "/GetEmail/MerchantReport");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the daily deals email html</returns>
-        public async Task<ContentResult> TestAutoprospectingTemplate()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingVM(), "/GetEmail/Autoprospecting");
-        }
+        //public async Task<ContentResult> TestAutoprospectingTemplate()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingVM(), "/GetEmail/Autoprospecting");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
         /// </summary>
         /// <returns>the daily deals email html</returns>
-        public async Task<ContentResult> TestAutoprospectingCreateNewOfferTemplate()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateOfferVM("RestaurantAP1"), "/GetEmail/AutoprospectingCreateNewOffer/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestAutoprospectingCreateNewOfferTemplate()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateOfferVM("RestaurantAP1"), "/GetEmail/AutoprospectingCreateNewOffer/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Tests the autoprospecting deem template.
@@ -132,10 +132,10 @@ namespace OffersEmail.FrontEnd.Controllers
         /// <returns>
         /// The Autoprospecting Deem Template
         /// </returns>
-        public async Task<ContentResult> TestAutoprospectingCreateNewOfferDeemTemplate()
-        {
-            return await GetTemplate(TestData.GetAutoprospectingCreateOfferVM("DeemGenericAP1"), "/GetEmail/AutoprospectingCreateNewOffer/testemailcampaign/");
-        }
+        //public async Task<ContentResult> TestAutoprospectingCreateNewOfferDeemTemplate()
+        //{
+        //    return await GetTemplate(TestData.GetAutoprospectingCreateOfferVM("DeemGenericAP1"), "/GetEmail/AutoprospectingCreateNewOffer/testemailcampaign/");
+        //}
 
         /// <summary>
         /// Test autoprospecting email
@@ -783,12 +783,12 @@ namespace OffersEmail.FrontEnd.Controllers
         /// <returns>
         /// TestMigrateUserTemplate Template
         /// </returns>
-        public async Task<ContentResult> TestMigrateUserTemplate()
-        {
-            var model = TestData.GetReminderActivateAccountModel();
-            model.Content = "https://www.earnbymicrosoft.com/Migrate?ut=Bt7YQtpNxol2ld03qifcmqvrJ0izByQ9T5SCcpV1ReSTJNPbur6K6Y2L3Cxd4Vs6";
-            return await GetTemplate(model, "/Earn/MigrateUser");
-        }
+        //public async Task<ContentResult> TestMigrateUserTemplate()
+        //{
+        //    var model = TestData.GetReminderActivateAccountModel();
+        //    model.Content = "https://www.earnbymicrosoft.com/Migrate?ut=Bt7YQtpNxol2ld03qifcmqvrJ0izByQ9T5SCcpV1ReSTJNPbur6K6Y2L3Cxd4Vs6";
+        //    return await GetTemplate(model, "/Earn/MigrateUser");
+        //}
 
         /// <summary>
         /// Tests the Hero Tile Preview Html template.
@@ -826,24 +826,24 @@ namespace OffersEmail.FrontEnd.Controllers
         /// Tests the merchant billing statement.
         /// </summary>
         /// <returns>MerchantBillingStatement html</returns>
-        public async Task<ActionResult> TestMerchantBillingStatementHtml()
-        {
-            return await GetTemplate(TestMerchantBillingStatement.GetData(), "/Report/MerchantBillingStatement");
-        }
+        //public async Task<ActionResult> TestMerchantBillingStatementHtml()
+        //{
+        //    return await GetTemplate(TestMerchantBillingStatement.GetData(), "/Report/MerchantBillingStatement");
+        //}
 
         /// <summary>
         /// Tests the merchant billing statement.
         /// </summary>
         /// <returns>MerchantBillingStatement html</returns>
-        public async Task<ActionResult> TestMerchantBillingStatementPdf()
-        {
-            using (var client = new HttpClient())
-            {
-                var response = await client.PostAsJsonAsync(GetUri("/Report/MerchantBillingStatementPdf").AbsoluteUri, TestMerchantBillingStatement.GetData());
-                response.EnsureSuccessStatusCode();
-                return File(await response.Content.ReadAsStreamAsync(), MediaTypeNames.Application.Pdf);
-            }
-        }
+        //public async Task<ActionResult> TestMerchantBillingStatementPdf()
+        //{
+        //    using (var client = new HttpClient())
+        //    {
+        //        var response = await client.PostAsJsonAsync(GetUri("/Report/MerchantBillingStatementPdf").AbsoluteUri, TestMerchantBillingStatement.GetData());
+        //        response.EnsureSuccessStatusCode();
+        //        return File(await response.Content.ReadAsStreamAsync(), MediaTypeNames.Application.Pdf);
+        //    }
+        //}
 
         /// <summary>
         /// Tests the daily deals template.
