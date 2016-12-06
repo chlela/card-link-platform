@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -62,10 +62,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <ProjectReference Include="..\DataContracts\Commerce.DataContracts.csproj">
       <Project>{0ff826a6-bce1-462d-ae04-f291390f6470}</Project>
       <Name>Commerce.DataContracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\shared\models\DotM.DataModels\DotM.DataModels.csproj">
-      <Project>{43993608-978a-4330-8a5f-d96a8fa3eadb}</Project>
-      <Name>DotM.DataModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\shared\utils\Common.Utils\Common.Utils.csproj">
       <Project>{2DF48B39-6126-4C23-9610-4A6A1185CBB4}</Project>

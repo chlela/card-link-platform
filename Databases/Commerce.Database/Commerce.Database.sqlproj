@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -640,9 +640,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SuppressTSqlWarnings>71502</SuppressTSqlWarnings>
     </Build>
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="Commerce.Database.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Commerce.Database.Int.publish.xml" />

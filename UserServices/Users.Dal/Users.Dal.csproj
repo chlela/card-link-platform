@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -276,10 +276,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\shared\models\DotM.DataModels\DotM.DataModels.csproj">
-      <Project>{43993608-978A-4330-8A5F-D96A8FA3EADB}</Project>
-      <Name>DotM.DataModels</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\shared\utils\Azure.Utils\Azure.Utils.csproj">
       <Project>{24b11302-a10f-476c-a7cf-818a621b5abb}</Project>
       <Name>Azure.Utils</Name>
