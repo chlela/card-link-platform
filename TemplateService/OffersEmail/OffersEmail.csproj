@@ -60,6 +60,11 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
       <DesignTime>True</DesignTime>
       <DependentUpon>DailyDeals.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Earn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Earn.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Feedback.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +110,10 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <EmbeddedResource Include="Resources\DailyDeals.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DailyDeals.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Earn.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Earn.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Feedback.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

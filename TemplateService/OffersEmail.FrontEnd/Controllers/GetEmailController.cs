@@ -90,25 +90,25 @@ namespace OffersEmail.FrontEnd.Controllers
         /// <param name="campaign">The Specific Campaign of this email</param>
         /// <param name="referrer">The referrer for analyitics</param>
         /// <returns>the view.</returns>
-        [HttpPost]
-        public ActionResult MsnDeals(string campaign = "na", string referrer = "BO_EMAIL")
-        {
-            ViewBag.campaign = campaign;
-            ViewBag.referrer = referrer;
-            if (Request.ContentLength == 0)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Nothing was submitted");
-            }
+        //[HttpPost]
+        //public ActionResult MsnDeals(string campaign = "na", string referrer = "BO_EMAIL")
+        //{
+        //    ViewBag.campaign = campaign;
+        //    ViewBag.referrer = referrer;
+        //    if (Request.ContentLength == 0)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Nothing was submitted");
+        //    }
 
-            // Need to do this for an unknown reason within MVC. When passing url parameters to the method, position is set to the end of the stream.
-            Request.InputStream.Position = 0;
+        //    // Need to do this for an unknown reason within MVC. When passing url parameters to the method, position is set to the end of the stream.
+        //    Request.InputStream.Position = 0;
 
-            using (var reader = new StreamReader(Request.InputStream))
-            {
-                string content = reader.ReadToEnd();
-                return this.View(new MsnDealsVM(JsonConvert.DeserializeObject(content) as JObject));
-            }
-        }
+        //    using (var reader = new StreamReader(Request.InputStream))
+        //    {
+        //        string content = reader.ReadToEnd();
+        //        return this.View(new MsnDealsVM(JsonConvert.DeserializeObject(content) as JObject));
+        //    }
+        //}
 
         /// <summary>
         /// Binds the MSN Intro email template.
