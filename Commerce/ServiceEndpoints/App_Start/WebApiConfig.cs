@@ -69,7 +69,7 @@ namespace Lomo.Commerce.Service
             config.Formatters.XmlFormatter.UseXmlSerializer = true;
 
             // Application Insights
-            config.Services.Add(typeof(IExceptionLogger), new AiExceptionLogger());
+            //config.Services.Add(typeof(IExceptionLogger), new AiExceptionLogger());
         }
     }
 }
