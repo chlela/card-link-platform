@@ -19,7 +19,6 @@ namespace Lomo.Commerce.Service
     using Lomo.Commerce.Configuration;
     using Lomo.Commerce.Logging;
     using Lomo.Commerce.Utilities;
-    using Microsoft.ApplicationInsights.Extensibility;
     using Microsoft.Azure;
     using Users.Dal;
 
@@ -61,7 +60,7 @@ namespace Lomo.Commerce.Service
         {
             // Use only for debugging
             // TelemetryConfiguration.Active.TelemetryChannel.DeveloperMode = true;
-            TelemetryConfiguration.Active.InstrumentationKey = CloudConfigurationManager.GetSetting("APPINSIGHTS_INSTRUMENTATIONKEY");
+            //TelemetryConfiguration.Active.InstrumentationKey = CloudConfigurationManager.GetSetting("APPINSIGHTS_INSTRUMENTATIONKEY");
             
             // Register log.
             LogInitializer.CreateLogInstance(CommerceServiceConfig.Instance.LogVerbosity,

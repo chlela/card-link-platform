@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -39,13 +39,11 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.1\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -67,7 +65,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Compile Include="OrchestratedJobs\PartnerJobs\AmexOfferBlobUploadTask.cs" />
     <Compile Include="OrchestratedJobs\PartnerJobs\AmexOfferRegistrationJob.cs" />
     <Compile Include="OrchestratedJobs\Rewards\ApplyEarnCredit.cs" />
-    <Compile Include="OrchestratedJobs\Rewards\ApplyBingRewardsPoints.cs" />
     <Compile Include="OrchestratedJobs\Rewards\ApplyRedemptionRewardJob.cs" />
     <Compile Include="OrchestratedJobs\Rewards\ApplyRewardTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,10 +163,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <ProjectReference Include="..\Notifications\Commerce.Notifications.csproj">
       <Project>{6CE5B414-7C4D-46E7-90F2-05439E9F9F6A}</Project>
       <Name>Commerce.Notifications</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SftpClient\Commerce.SftpClient.csproj">
-      <Project>{1C84DE35-0F60-411C-B888-425B67B1F56C}</Project>
-      <Name>Commerce.SftpClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utilities\Commerce.Utilities.csproj">
       <Project>{78499661-CFDE-4218-BB0B-B3866BD8DAFD}</Project>

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-Copyright (c) Microsoft Corporation. All rights reserved. 
-Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
--->
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <PerformanceCounters>
   <Category CategoryName="Windows Azure Caching:Client" CategoryHelp="Performance counters for caching clients">
     <Counter Name="Requests" Type="NumberOfItems64" HelpString="TotalRequestsHelp"/>

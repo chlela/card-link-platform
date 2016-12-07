@@ -71,38 +71,38 @@ namespace Lomo.Authorization
                 throw new Exception("The LomoSecurityProvider.Authenticate() method was called with invalid Credentials.");
             }
 
-            var externalIdentityInfo = Authentication.BingSocialAccessorRepository.GetUserAccountInfo(credentials.Token);
+            //var externalIdentityInfo = Authentication.BingSocialAccessorRepository.GetUserAccountInfo(credentials.Token);
 
-            if (externalIdentityInfo != null && externalIdentityInfo.UserId != null)
-            {
-                User user = null;
-                if (!useExternalIdentity)
-                {
-                    user = this.CreateOrGetInternalUser(externalIdentityInfo);
-                }
+            //if (externalIdentityInfo != null && externalIdentityInfo.UserId != null)
+            //{
+            //    User user = null;
+            //    if (!useExternalIdentity)
+            //    {
+            //        user = this.CreateOrGetInternalUser(externalIdentityInfo);
+            //    }
 
-                Guid userId = default(Guid);
-                var userName = externalIdentityInfo.Name;
-                var emailAddress = externalIdentityInfo.UserEmail;
-                if (user != null)
-                {
-                    userId = user.Id;
-                    if (string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(user.Name))
-                    {
-                        userName = user.Name;
-                    }
+            //    Guid userId = default(Guid);
+            //    var userName = externalIdentityInfo.Name;
+            //    var emailAddress = externalIdentityInfo.UserEmail;
+            //    if (user != null)
+            //    {
+            //        userId = user.Id;
+            //        if (string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(user.Name))
+            //        {
+            //            userName = user.Name;
+            //        }
 
-                    emailAddress = user.Email;
-                }
+            //        emailAddress = user.Email;
+            //    }
 
-                var identity = new CustomIdentity(userId, userName, SecurityProvider, externalIdentityInfo.UserId)
-                                   {
-                                       EmailAddress = emailAddress
-                                   };
+            //    var identity = new CustomIdentity(userId, userName, SecurityProvider, externalIdentityInfo.UserId)
+            //                       {
+            //                           EmailAddress = emailAddress
+            //                       };
 
-                var payload = new AuthPayload(identity);
-                return payload;
-            }
+            //    var payload = new AuthPayload(identity);
+            //    return payload;
+            //}
 
             return null;
         }

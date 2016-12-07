@@ -51,12 +51,12 @@ namespace Lomo.Commerce.Logging
             string deploymentId = null;
             string instanceId = null;
             TraceListener traceListener = null;
-            if (General.RunningInAzure == true)
-            {
-                deploymentId = RoleEnvironment.DeploymentId;
-                instanceId = RoleEnvironment.CurrentRoleInstance.Id;
-                traceListener = new DiagnosticMonitorTraceListener { Name = "AzureDiagnostics" };
-            }
+            //if (General.RunningInAzure == true)
+            //{
+            //    deploymentId = RoleEnvironment.DeploymentId;
+            //    instanceId = RoleEnvironment.CurrentRoleInstance.Id;
+            //    traceListener = new DiagnosticMonitorTraceListener { Name = "AzureDiagnostics" };
+            //}
 
             CreateLogInstance(deploymentId, instanceId, traceListener, logVerbosity, forceEventLog, source, configuration);
         }        

@@ -7,7 +7,7 @@ namespace Lomo.Commerce.DataAccess
 #if UNIT_TESTS
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Lomo.Commerce.Context;
-    using Lomo.Commerce.DataAccess.Test;
+    //using Lomo.Commerce.DataAccess.Test;
 #endif
     using Lomo.Commerce.DataContracts.Extensions;
     using Lomo.Commerce.DataModels;
@@ -254,7 +254,7 @@ namespace Lomo.Commerce.DataAccess
         [TestCleanup]
         public void TestCleanup()
         {
-            DatabaseTestManagement.CleanupDataStore();
+            //DatabaseTestManagement.CleanupDataStore();
         }
 #endif        
         #endregion

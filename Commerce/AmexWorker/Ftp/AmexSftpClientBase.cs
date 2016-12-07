@@ -9,7 +9,7 @@ namespace Lomo.Commerce.AmexWorker
     using System.Threading.Tasks;
     using Lomo.Commerce.Configuration;
     using Lomo.Commerce.Logging;
-    using Lomo.Commerce.SftpClient;
+    //using Lomo.Commerce.SftpClient;
     using Microsoft.Azure;
 
     /// <summary>
@@ -34,7 +34,7 @@ namespace Lomo.Commerce.AmexWorker
         /// </param>
         protected AmexSftpClientBase(string userName, string password, CommerceLog log)
         {
-            Client = SftpClientFactory.SftpClient(userName, password, SftpUri, CommerceWorkerConfig.Instance);
+            //Client = SftpClientFactory.SftpClient(userName, password, SftpUri, CommerceWorkerConfig.Instance);
             Log = log;
         }
 
@@ -47,7 +47,8 @@ namespace Lomo.Commerce.AmexWorker
         public virtual async Task<string[]> DirectoryListAsync(string fileNamePrefix, string folderName)
         {
             Log.Verbose("Request to get file list");
-            return await Client.DirectoryListAsync(fileNamePrefix, folderName);
+            return new string[] { };
+            //return await Client.DirectoryListAsync(fileNamePrefix, folderName);
         }
 
         /// <summary>
@@ -67,7 +68,7 @@ namespace Lomo.Commerce.AmexWorker
         {
            
             Log.Verbose("Request to Upload file {0}", fileName);
-            await Client.UploadFileAsync(fileName, stream, folderName);
+            //await Client.UploadFileAsync(fileName, stream, folderName);
             
         }
 
@@ -88,7 +89,7 @@ namespace Lomo.Commerce.AmexWorker
         {
 
             Log.Verbose("Request to Download file {0}", fileName);
-            await Client.DownloadFileAsync(fileName, stream, folderName);
+            //await Client.DownloadFileAsync(fileName, stream, folderName);
         }
 
         /// <summary>
@@ -118,7 +119,7 @@ namespace Lomo.Commerce.AmexWorker
         /// <summary>
         /// Sftp Client
         /// </summary>
-        private ISftpClient Client;
+        //private ISftpClient Client;
 
 
     }

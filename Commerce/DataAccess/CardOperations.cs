@@ -438,5 +438,20 @@ namespace Lomo.Commerce.DataAccess
 
             return result;
         }
+
+    public IEnumerable<InternalCard> RetrieveCardsByRewardPrograms()
+    {
+      throw new NotImplementedException();
     }
+
+    public IEnumerable<InternalCard> RetrieveAllActiveCards()
+    {
+      throw new NotImplementedException();
+    }
+
+    public ResultCode EnrollCardsInRewardPrograms(Guid userGlobalId, RewardPrograms rewardPrograms, ICollection<CardBrand> cardBrands)
+    {
+      throw new NotImplementedException();
+    }
+  }
 }

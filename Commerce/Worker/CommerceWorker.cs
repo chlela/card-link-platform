@@ -13,7 +13,6 @@ namespace Lomo.Commerce.Worker
     using Lomo.Commerce.WorkerCommon;
     using Lomo.Commerce.WorkerJobs;
     using Lomo.Scheduler;
-    using Microsoft.ApplicationInsights.Extensibility;
     using Microsoft.Azure;
     using Microsoft.WindowsAzure.ServiceRuntime;
     using System;
@@ -135,7 +134,7 @@ namespace Lomo.Commerce.Worker
 
             // Use only for debugging
             // TelemetryConfiguration.Active.TelemetryChannel.DeveloperMode = true;
-            TelemetryConfiguration.Active.InstrumentationKey = CloudConfigurationManager.GetSetting("APPINSIGHTS_INSTRUMENTATIONKEY");
+            //TelemetryConfiguration.Active.InstrumentationKey = CloudConfigurationManager.GetSetting("APPINSIGHTS_INSTRUMENTATIONKEY");
 
             // Create a CommerceLog instance to funnel log entries to the log.
             LogInitializer.CreateLogInstance(CommerceWorkerConfig.Instance.LogVerbosity,

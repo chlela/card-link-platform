@@ -7,7 +7,7 @@ namespace AnalyticsClient
   using System.Security.Cryptography;
   using System.Text;
 
-  using DataCollection.IdentityModel;
+  //using DataCollection.IdentityModel;
 
   /// <summary>
   /// The analytics user id.

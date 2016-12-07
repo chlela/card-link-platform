@@ -35,8 +35,7 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.1\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -59,6 +58,10 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Compile Include="RewardsNetworkConstants.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\shared\models\DotM.DataContracts\DotM.DataContracts.csproj">
+      <Project>{90023d82-6810-4e6c-82cf-995c76266e22}</Project>
+      <Name>DotM.DataContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataContracts\Commerce.DataContracts.csproj">
       <Project>{0ff826a6-bce1-462d-ae04-f291390f6470}</Project>
       <Name>Commerce.DataContracts</Name>
@@ -98,10 +101,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <ProjectReference Include="..\Logging\Commerce.Logging.csproj">
       <Project>{3fa7609a-4c21-46cc-9c76-0daefe77815c}</Project>
       <Name>Commerce.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SftpClient\Commerce.SftpClient.csproj">
-      <Project>{1c84de35-0f60-411c-b888-425b67b1f56c}</Project>
-      <Name>Commerce.SftpClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utilities\Commerce.Utilities.csproj">
       <Project>{78499661-cfde-4218-bb0b-b3866bd8dafd}</Project>

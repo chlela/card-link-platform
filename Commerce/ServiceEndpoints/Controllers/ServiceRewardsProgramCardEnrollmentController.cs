@@ -10,6 +10,7 @@ namespace Lomo.Commerce.Service
     using System.Net.Http;
     using System.Web.Http;
     using System.Diagnostics;
+    using System.Linq;
 
     using Lomo.Authorization;
     using Lomo.Commerce.Context;
@@ -134,21 +135,21 @@ namespace Lomo.Commerce.Service
                 {
                     errorMessage = "The user id is not valid.";
                 }
-                else if (enrollment.CardBrands == null || enrollment.CardBrands.Length == 0)
+                else if (enrollment.CardBrands == null || enrollment.CardBrands.Count() == 0)
                 {
                     errorMessage = "No card brands were specified.";
                 }
-                else if (enrollment.RewardPrograms == null || enrollment.RewardPrograms.Length == 0)
+                else if (enrollment.RewardPrograms == null || enrollment.RewardPrograms.Count() == 0)
                 {
                     errorMessage = "No reward programs were specified.";
                 }
                 else
                 {
-                    cardBrands = new CardBrand[enrollment.CardBrands.Length];
+                    cardBrands = new CardBrand[enrollment.CardBrands.Count()];
 
-                    for (int i = 0; i < enrollment.CardBrands.Length; i++)
+                    for (int i = 0; i < enrollment.CardBrands.Count(); i++)
                     {
-                        var cardBrand = enrollment.CardBrands[i];
+                        var cardBrand = enrollment.CardBrands.ElementAt(i);
                         CardBrand brand;
                         if (Enum.TryParse(cardBrand, true, out brand))
                         {

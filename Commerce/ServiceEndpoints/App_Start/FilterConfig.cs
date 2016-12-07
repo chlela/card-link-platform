@@ -33,7 +33,7 @@ namespace Lomo.Commerce.Service
             }
 
             filters.Add(new HandleErrorAttribute());
-            filters.Add(new AiHandleErrorAttribute());
+            //filters.Add(new AiHandleErrorAttribute());
         }
     }
 }

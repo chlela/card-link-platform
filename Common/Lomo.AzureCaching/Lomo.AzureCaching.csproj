@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
@@ -40,36 +40,36 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ApplicationServer.Caching.AzureClientHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.Caching.2.8.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.AzureClientHelper.dll</HintPath>
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.Caching.2.9.5\lib\net40-full\Microsoft.ApplicationServer.Caching.AzureClientHelper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ApplicationServer.Caching.AzureCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.Caching.2.8.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.AzureCommon.dll</HintPath>
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.Caching.2.9.5\lib\net40-full\Microsoft.ApplicationServer.Caching.AzureCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ApplicationServer.Caching.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.Caching.2.8.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.Caching.2.9.5\lib\net40-full\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ApplicationServer.Caching.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.Caching.2.8.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.Caching.2.9.5\lib\net40-full\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.DistributedCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.Caching.2.8.0.0\lib\net40-full\Microsoft.Web.DistributedCache.dll</HintPath>
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.Caching.2.9.5\lib\net40-full\Microsoft.Web.DistributedCache.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Configuration">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.1\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.WindowsFabric.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.Caching.2.8.0.0\lib\net40-full\Microsoft.WindowsFabric.Common.dll</HintPath>
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.Caching.2.9.5\lib\net40-full\Microsoft.WindowsFabric.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsFabric.Data.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Microsoft.WindowsAzure.Caching.2.8.0.0\lib\net40-full\Microsoft.WindowsFabric.Data.Common.dll</HintPath>
+      <HintPath>..\..\Commerce\packages\Microsoft.WindowsAzure.Caching.2.9.5\lib\net40-full\Microsoft.WindowsFabric.Data.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -92,7 +92,9 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <None Include="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LoMoCache\LoMoCache.csproj">
@@ -101,10 +103,12 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe">
+    <None Include="Microsoft.WindowsAzure.Caching\PerformanceCounters.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Microsoft.WindowsAzure.Caching\PerformanceCounters.xml">
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

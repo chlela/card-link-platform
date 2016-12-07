@@ -16,7 +16,7 @@ namespace Commerce.RewardsNetworkWorker
     using Lomo.Commerce.DataAccess;
     using Lomo.Commerce.DataContracts.Extensions;
     using Lomo.Commerce.DataModels;
-    using Lomo.Commerce.SftpClient;
+    //using Lomo.Commerce.SftpClient;
     using Lomo.Commerce.Utilities;
     using Microsoft.Azure;
 
@@ -99,7 +99,7 @@ namespace Commerce.RewardsNetworkWorker
                         string zipCode = null;
                         string[] providerDealIdParts = deal.ProviderDealId.Split(':');
                         if (deal.Business != null && deal.Business.Locations != null &&
-                            deal.Business.Locations.Count > 0)
+                            deal.Business.Locations.Count() > 0)
                         {
                             zipCode = deal.Business.Locations.First().Zip;
                         }
@@ -156,8 +156,8 @@ namespace Commerce.RewardsNetworkWorker
         {
             MemoryStream memoryStream = new MemoryStream(Encoding.ASCII.GetBytes(reportTuple.Item2));
          
-            DefaultSftpClient defaultSftpClient = new DefaultSftpClient(FtpUserName, FtpPassword, FtpUri);
-            defaultSftpClient.UploadFileAsync(reportTuple.Item1, memoryStream, FtpFolder).Wait();
+          //  DefaultSftpClient defaultSftpClient = new DefaultSftpClient(FtpUserName, FtpPassword, FtpUri);
+          //  defaultSftpClient.UploadFileAsync(reportTuple.Item1, memoryStream, FtpFolder).Wait();
         }
 
         /// <summary>

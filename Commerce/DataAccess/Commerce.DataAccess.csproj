@@ -113,7 +113,6 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
     <Compile Include="RedeemedDealOperations.cs" />
     <Compile Include="RewardOperations.cs" />
     <Compile Include="SequenceOperations.cs" />
-    <Compile Include="Test\DatabaseTestManagement.cs" />
     <Compile Include="UserOperations.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +224,9 @@ Licensed under the MIT license. See LICENSE.txt file in the project root for ful
       <Project>{78499661-cfde-4218-bb0b-b3866bd8dafd}</Project>
       <Name>Commerce.Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Test\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
